@@ -29,7 +29,8 @@ public:
     bool IsFullscreen();
     bool IsFocused();
     
-    sf::Vector2u GetWindowSize();
+    //sf::Vector2u GetWindowSize();
+    sf::RenderWindow& GetRenderWindow();
     EventManager* GetEventManager();
     
     void ToggleFullscreen(EventDetails * details = nullptr);
@@ -44,7 +45,8 @@ private:
     
     EventManager event_manager_;
     sf::RenderWindow window_;
-    sf::Vector2u window_size_;
+    sf::Vector2u initial_window_size_;
+    //sf::Image window_icon_;
     std::string window_title_;
     bool is_done_;
     bool is_fullscreen_;

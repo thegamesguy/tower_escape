@@ -61,7 +61,7 @@ private:
     void RegisterState(const StateType& state_type) {
         state_factory_[state_type] = [this]()->BaseState*
         {
-            return new T(this);
+            return new T(*this);
         };
     }
     

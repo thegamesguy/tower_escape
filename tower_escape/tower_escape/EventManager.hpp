@@ -102,6 +102,7 @@ public:
     
     void HandleInput();
     void Update();
+    void SetCurrentState(StateType state);
     
     template<class T> bool AddCallback(StateType state, const std::string name, void(T::*func)(EventDetails*), T*instance)
     {

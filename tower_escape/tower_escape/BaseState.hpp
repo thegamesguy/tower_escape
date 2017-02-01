@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <SFML/Graphics.hpp>
+#include "EventManager.hpp"
 
 class StateManager;
 
@@ -21,7 +22,7 @@ class BaseState {
 public:
     BaseState(StateManager& state_manager) : state_manager_(state_manager),
     is_transparent_(false), is_transcendent_(false){}
-    virtual ~BaseState();
+    virtual ~BaseState(){};
     
     virtual void OnCreate() = 0;
     virtual void OnDestroy() = 0;

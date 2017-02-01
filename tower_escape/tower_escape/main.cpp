@@ -4,9 +4,12 @@
 
 
 #include "Game.hpp"
+#include "ResourcePath.hpp"
 
 int main(int, char const**)
 {
+
+    
     Game game;
     
     while (!game.GetWindow()->IsDone()) {

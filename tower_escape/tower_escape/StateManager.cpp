@@ -7,12 +7,16 @@
 //
 
 #include "StateManager.hpp"
+#include "IntroState.hpp"
+#include "MainMenuState.hpp"
 
 StateManager::StateManager(SharedContext& context) : shared_context_(context)
 {
     // Register states
-    //RegisterState<StateIntro>(StateType::kIntro);
-    //RegisterState<State_MainMenu>(StateType::MainMenu); RegisterState<State_Game>(StateType::Game); RegisterState<State_Paused>(StateType::Paused);
+    RegisterState<IntroState>(StateType::kIntro);
+    RegisterState<MainMenuState>(StateType::kMainMenu);
+    
+    //RegisterState<State_Game>(StateType::Game); RegisterState<State_Paused>(StateType::Paused);
 }
 
 StateManager::~StateManager()
@@ -116,6 +120,7 @@ void StateManager::ProcessRequests()
 {
     while (states_to_remove_.begin() != states_to_remove_.end()) {
         RemoveState(*states_to_remove_.begin());
+        states_to_remove_.erase(states_to_remove_.begin());
     }
 }
 

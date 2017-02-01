@@ -197,6 +197,11 @@ void EventManager::Update()
     }
 }
 
+void EventManager::SetCurrentState(StateType state)
+{
+    current_state_ = state;
+}
+
 void EventManager::LoadBindings()
 {
     std::string delimiter = ":";

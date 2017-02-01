@@ -26,15 +26,20 @@ Window::~Window()
 
 void Window::Setup(const std::string title, const sf::Vector2u& size)
 {
+    //window_icon_.loadFromFile(resourcePath() + "icon.png");
+    
+    //window_.setIcon(window_icon_.getSize().x, window_icon_.getSize().y, window_icon_.getPixelsPtr());
+    
     window_title_ = title;
-    window_size_ = size;
+    initial_window_size_ = size;
     is_fullscreen_ = false;
     is_done_ = false;
     is_focused_ = true;
     
 
-    event_manager_.AddCallback(StateType::kMainMenu, "fullscreen_toggle", &Window::ToggleFullscreen, this);
-    event_manager_.AddCallback(StateType::kMainMenu, "window_close", &Window::Close, this);
+    // Global states callbacks.
+    event_manager_.AddCallback(StateType(0), "fullscreen_toggle", &Window::ToggleFullscreen, this);
+    event_manager_.AddCallback(StateType(0), "window_close", &Window::Close, this);
     
     Create();
 }
@@ -43,7 +48,7 @@ void Window::Create()
 {
     sf::Uint32 style = is_fullscreen_ ? sf::Style::Fullscreen : sf::Style::Default;
     
-    window_.create({window_size_.x, window_size_.y, 32}, window_title_, style);
+    window_.create({initial_window_size_.x, initial_window_size_.y, 32}, window_title_, style);
 }
 
 void Window::Destroy()
@@ -101,14 +106,26 @@ bool Window::IsFullscreen()
     return is_fullscreen_;
 }
 
+/*
 sf::Vector2u Window::GetWindowSize()
 {
     return window_size_;
+}
+ */
+
+sf::RenderWindow& Window::GetRenderWindow()
+{
+    return window_;
 }
 
 void Window::Draw(sf::Drawable& drawable)
 {
     window_.draw(drawable);
+}
+
+EventManager* Window::GetEventManager()
+{
+    return &event_manager_;
 }
 
 

@@ -16,8 +16,11 @@
 		669A21851E40CF29009D5FC9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21831E40CF29009D5FC9 /* Game.cpp */; };
 		669A21881E40D61B009D5FC9 /* EventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21861E40D61B009D5FC9 /* EventManager.cpp */; };
 		669A218A1E40F214009D5FC9 /* keys.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 669A21891E40F214009D5FC9 /* keys.cfg */; };
-		669A218E1E40FF4A009D5FC9 /* BaseState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A218C1E40FF4A009D5FC9 /* BaseState.cpp */; };
 		669A21911E4106D7009D5FC9 /* StateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A218F1E4106D7009D5FC9 /* StateManager.cpp */; };
+		669A219A1E422190009D5FC9 /* IntroState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21981E422190009D5FC9 /* IntroState.cpp */; };
+		669A219E1E42369B009D5FC9 /* country_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 669A219C1E42369A009D5FC9 /* country_back.png */; };
+		669A219F1E42369B009D5FC9 /* country_front.png in Resources */ = {isa = PBXBuildFile; fileRef = 669A219D1E42369B009D5FC9 /* country_front.png */; };
+		669A21A21E423EF6009D5FC9 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21A01E423EF6009D5FC9 /* MainMenuState.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,11 +39,17 @@
 		669A21861E40D61B009D5FC9 /* EventManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventManager.cpp; sourceTree = "<group>"; };
 		669A21871E40D61B009D5FC9 /* EventManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EventManager.hpp; sourceTree = "<group>"; };
 		669A21891E40F214009D5FC9 /* keys.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keys.cfg; sourceTree = "<group>"; };
-		669A218C1E40FF4A009D5FC9 /* BaseState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseState.cpp; sourceTree = "<group>"; };
 		669A218D1E40FF4A009D5FC9 /* BaseState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseState.hpp; sourceTree = "<group>"; };
 		669A218F1E4106D7009D5FC9 /* StateManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateManager.cpp; sourceTree = "<group>"; };
 		669A21901E4106D7009D5FC9 /* StateManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateManager.hpp; sourceTree = "<group>"; };
 		669A21961E413FEA009D5FC9 /* EnumHash.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnumHash.hpp; sourceTree = "<group>"; };
+		669A21981E422190009D5FC9 /* IntroState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntroState.cpp; sourceTree = "<group>"; };
+		669A21991E422190009D5FC9 /* IntroState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IntroState.hpp; sourceTree = "<group>"; };
+		669A219B1E423337009D5FC9 /* operational_amplifier.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = operational_amplifier.ttf; sourceTree = "<group>"; };
+		669A219C1E42369A009D5FC9 /* country_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = country_back.png; sourceTree = "<group>"; };
+		669A219D1E42369B009D5FC9 /* country_front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = country_front.png; sourceTree = "<group>"; };
+		669A21A01E423EF6009D5FC9 /* MainMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuState.cpp; sourceTree = "<group>"; };
+		669A21A11E423EF6009D5FC9 /* MainMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainMenuState.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,9 @@
 		669A216C1E40AF44009D5FC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				669A219C1E42369A009D5FC9 /* country_back.png */,
+				669A219D1E42369B009D5FC9 /* country_front.png */,
+				669A219B1E423337009D5FC9 /* operational_amplifier.ttf */,
 				669A217E1E40B22C009D5FC9 /* icon.png */,
 				669A21891E40F214009D5FC9 /* keys.cfg */,
 				669A217A1E40AFA9009D5FC9 /* character.png */,
@@ -112,10 +124,13 @@
 		669A218B1E40FF37009D5FC9 /* State Management */ = {
 			isa = PBXGroup;
 			children = (
-				669A218C1E40FF4A009D5FC9 /* BaseState.cpp */,
 				669A218D1E40FF4A009D5FC9 /* BaseState.hpp */,
 				669A218F1E4106D7009D5FC9 /* StateManager.cpp */,
 				669A21901E4106D7009D5FC9 /* StateManager.hpp */,
+				669A21981E422190009D5FC9 /* IntroState.cpp */,
+				669A21991E422190009D5FC9 /* IntroState.hpp */,
+				669A21A01E423EF6009D5FC9 /* MainMenuState.cpp */,
+				669A21A11E423EF6009D5FC9 /* MainMenuState.hpp */,
 			);
 			name = "State Management";
 			sourceTree = "<group>";
@@ -181,7 +196,9 @@
 			files = (
 				669A217D1E40AFA9009D5FC9 /* environment.png in Resources */,
 				669A217C1E40AFA9009D5FC9 /* character.png in Resources */,
+				669A219F1E42369B009D5FC9 /* country_front.png in Resources */,
 				669A218A1E40F214009D5FC9 /* keys.cfg in Resources */,
+				669A219E1E42369B009D5FC9 /* country_back.png in Resources */,
 				669A217F1E40B22C009D5FC9 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,11 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				669A218E1E40FF4A009D5FC9 /* BaseState.cpp in Sources */,
 				669A216B1E40AF44009D5FC9 /* main.cpp in Sources */,
 				669A21881E40D61B009D5FC9 /* EventManager.cpp in Sources */,
 				669A21821E40C2EB009D5FC9 /* Window.cpp in Sources */,
+				669A219A1E422190009D5FC9 /* IntroState.cpp in Sources */,
 				669A21681E40AF44009D5FC9 /* ResourcePath.mm in Sources */,
+				669A21A21E423EF6009D5FC9 /* MainMenuState.cpp in Sources */,
 				669A21851E40CF29009D5FC9 /* Game.cpp in Sources */,
 				669A21911E4106D7009D5FC9 /* StateManager.cpp in Sources */,
 			);
