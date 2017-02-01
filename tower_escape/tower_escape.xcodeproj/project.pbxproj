@@ -13,6 +13,11 @@
 		669A217D1E40AFA9009D5FC9 /* environment.png in Resources */ = {isa = PBXBuildFile; fileRef = 669A217B1E40AFA9009D5FC9 /* environment.png */; };
 		669A217F1E40B22C009D5FC9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 669A217E1E40B22C009D5FC9 /* icon.png */; };
 		669A21821E40C2EB009D5FC9 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21801E40C2EB009D5FC9 /* Window.cpp */; };
+		669A21851E40CF29009D5FC9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21831E40CF29009D5FC9 /* Game.cpp */; };
+		669A21881E40D61B009D5FC9 /* EventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21861E40D61B009D5FC9 /* EventManager.cpp */; };
+		669A218A1E40F214009D5FC9 /* keys.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 669A21891E40F214009D5FC9 /* keys.cfg */; };
+		669A218E1E40FF4A009D5FC9 /* BaseState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A218C1E40FF4A009D5FC9 /* BaseState.cpp */; };
+		669A21911E4106D7009D5FC9 /* StateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A218F1E4106D7009D5FC9 /* StateManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,16 @@
 		669A217E1E40B22C009D5FC9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		669A21801E40C2EB009D5FC9 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		669A21811E40C2EB009D5FC9 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
+		669A21831E40CF29009D5FC9 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		669A21841E40CF29009D5FC9 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		669A21861E40D61B009D5FC9 /* EventManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventManager.cpp; sourceTree = "<group>"; };
+		669A21871E40D61B009D5FC9 /* EventManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EventManager.hpp; sourceTree = "<group>"; };
+		669A21891E40F214009D5FC9 /* keys.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keys.cfg; sourceTree = "<group>"; };
+		669A218C1E40FF4A009D5FC9 /* BaseState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseState.cpp; sourceTree = "<group>"; };
+		669A218D1E40FF4A009D5FC9 /* BaseState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseState.hpp; sourceTree = "<group>"; };
+		669A218F1E4106D7009D5FC9 /* StateManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateManager.cpp; sourceTree = "<group>"; };
+		669A21901E4106D7009D5FC9 /* StateManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateManager.hpp; sourceTree = "<group>"; };
+		669A21961E413FEA009D5FC9 /* EnumHash.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnumHash.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +73,19 @@
 		669A21641E40AF44009D5FC9 /* tower_escape */ = {
 			isa = PBXGroup;
 			children = (
+				669A218B1E40FF37009D5FC9 /* State Management */,
 				669A21671E40AF44009D5FC9 /* ResourcePath.mm */,
 				669A21691E40AF44009D5FC9 /* ResourcePath.hpp */,
 				669A216A1E40AF44009D5FC9 /* main.cpp */,
-				669A216C1E40AF44009D5FC9 /* Resources */,
-				669A21651E40AF44009D5FC9 /* Supporting Files */,
 				669A21801E40C2EB009D5FC9 /* Window.cpp */,
 				669A21811E40C2EB009D5FC9 /* Window.hpp */,
+				669A21831E40CF29009D5FC9 /* Game.cpp */,
+				669A21841E40CF29009D5FC9 /* Game.hpp */,
+				669A21861E40D61B009D5FC9 /* EventManager.cpp */,
+				669A21871E40D61B009D5FC9 /* EventManager.hpp */,
+				669A216C1E40AF44009D5FC9 /* Resources */,
+				669A21651E40AF44009D5FC9 /* Supporting Files */,
+				669A21961E413FEA009D5FC9 /* EnumHash.hpp */,
 			);
 			path = tower_escape;
 			sourceTree = "<group>";
@@ -81,10 +102,22 @@
 			isa = PBXGroup;
 			children = (
 				669A217E1E40B22C009D5FC9 /* icon.png */,
+				669A21891E40F214009D5FC9 /* keys.cfg */,
 				669A217A1E40AFA9009D5FC9 /* character.png */,
 				669A217B1E40AFA9009D5FC9 /* environment.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		669A218B1E40FF37009D5FC9 /* State Management */ = {
+			isa = PBXGroup;
+			children = (
+				669A218C1E40FF4A009D5FC9 /* BaseState.cpp */,
+				669A218D1E40FF4A009D5FC9 /* BaseState.hpp */,
+				669A218F1E4106D7009D5FC9 /* StateManager.cpp */,
+				669A21901E4106D7009D5FC9 /* StateManager.hpp */,
+			);
+			name = "State Management";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +181,7 @@
 			files = (
 				669A217D1E40AFA9009D5FC9 /* environment.png in Resources */,
 				669A217C1E40AFA9009D5FC9 /* character.png in Resources */,
+				669A218A1E40F214009D5FC9 /* keys.cfg in Resources */,
 				669A217F1E40B22C009D5FC9 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,9 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669A218E1E40FF4A009D5FC9 /* BaseState.cpp in Sources */,
 				669A216B1E40AF44009D5FC9 /* main.cpp in Sources */,
+				669A21881E40D61B009D5FC9 /* EventManager.cpp in Sources */,
 				669A21821E40C2EB009D5FC9 /* Window.cpp in Sources */,
 				669A21681E40AF44009D5FC9 /* ResourcePath.mm in Sources */,
+				669A21851E40CF29009D5FC9 /* Game.cpp in Sources */,
+				669A21911E4106D7009D5FC9 /* StateManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
