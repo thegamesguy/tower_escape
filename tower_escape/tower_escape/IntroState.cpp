@@ -77,14 +77,14 @@ void IntroState::Draw()
     window->Draw(intro_sprite_background_);
     window->Draw(intro_sprite_foreground_);
     
-    if(time_passed_ > 2.0f) {
+    if(time_passed_ > 1.0f) {
         window->Draw(intro_text_);
     }
 }
 
 void IntroState::Continue(EventDetails *event_details)
 {
-    if(time_passed_ > 2.0f) {
+    if(time_passed_ > 1.0f) {
         state_manager_.SwitchTo(StateType::kMainMenu);
         state_manager_.Remove(StateType::kIntro);
     }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		669A21681E40AF44009D5FC9 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 669A21671E40AF44009D5FC9 /* ResourcePath.mm */; };
 		669A216B1E40AF44009D5FC9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A216A1E40AF44009D5FC9 /* main.cpp */; };
 		669A217C1E40AFA9009D5FC9 /* character.png in Resources */ = {isa = PBXBuildFile; fileRef = 669A217A1E40AFA9009D5FC9 /* character.png */; };
 		669A217D1E40AFA9009D5FC9 /* environment.png in Resources */ = {isa = PBXBuildFile; fileRef = 669A217B1E40AFA9009D5FC9 /* environment.png */; };
@@ -21,13 +20,14 @@
 		669A219E1E42369B009D5FC9 /* country_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 669A219C1E42369A009D5FC9 /* country_back.png */; };
 		669A219F1E42369B009D5FC9 /* country_front.png in Resources */ = {isa = PBXBuildFile; fileRef = 669A219D1E42369B009D5FC9 /* country_front.png */; };
 		669A21A21E423EF6009D5FC9 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21A01E423EF6009D5FC9 /* MainMenuState.cpp */; };
+		669A21A51E42552E009D5FC9 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21A31E42552E009D5FC9 /* GameState.cpp */; };
+		669A21A81E42581B009D5FC9 /* PauseState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669A21A61E42581B009D5FC9 /* PauseState.cpp */; };
+		669A21CE1E428035009D5FC9 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 669A21CD1E428035009D5FC9 /* ResourcePath.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		669A21621E40AF44009D5FC9 /* tower_escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tower_escape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669A21661E40AF44009D5FC9 /* tower_escape-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tower_escape-Info.plist"; sourceTree = "<group>"; };
-		669A21671E40AF44009D5FC9 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
-		669A21691E40AF44009D5FC9 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		669A216A1E40AF44009D5FC9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		669A217A1E40AFA9009D5FC9 /* character.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = character.png; sourceTree = "<group>"; };
 		669A217B1E40AFA9009D5FC9 /* environment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = environment.png; sourceTree = "<group>"; };
@@ -50,6 +50,12 @@
 		669A219D1E42369B009D5FC9 /* country_front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = country_front.png; sourceTree = "<group>"; };
 		669A21A01E423EF6009D5FC9 /* MainMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuState.cpp; sourceTree = "<group>"; };
 		669A21A11E423EF6009D5FC9 /* MainMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainMenuState.hpp; sourceTree = "<group>"; };
+		669A21A31E42552E009D5FC9 /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
+		669A21A41E42552E009D5FC9 /* GameState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
+		669A21A61E42581B009D5FC9 /* PauseState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseState.cpp; sourceTree = "<group>"; };
+		669A21A71E42581B009D5FC9 /* PauseState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PauseState.hpp; sourceTree = "<group>"; };
+		669A21CC1E428035009D5FC9 /* ResourcePath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		669A21CD1E428035009D5FC9 /* ResourcePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +88,9 @@
 		669A21641E40AF44009D5FC9 /* tower_escape */ = {
 			isa = PBXGroup;
 			children = (
+				669A21CC1E428035009D5FC9 /* ResourcePath.hpp */,
+				669A21CD1E428035009D5FC9 /* ResourcePath.mm */,
 				669A218B1E40FF37009D5FC9 /* State Management */,
-				669A21671E40AF44009D5FC9 /* ResourcePath.mm */,
-				669A21691E40AF44009D5FC9 /* ResourcePath.hpp */,
 				669A216A1E40AF44009D5FC9 /* main.cpp */,
 				669A21801E40C2EB009D5FC9 /* Window.cpp */,
 				669A21811E40C2EB009D5FC9 /* Window.hpp */,
@@ -131,6 +137,10 @@
 				669A21991E422190009D5FC9 /* IntroState.hpp */,
 				669A21A01E423EF6009D5FC9 /* MainMenuState.cpp */,
 				669A21A11E423EF6009D5FC9 /* MainMenuState.hpp */,
+				669A21A31E42552E009D5FC9 /* GameState.cpp */,
+				669A21A41E42552E009D5FC9 /* GameState.hpp */,
+				669A21A61E42581B009D5FC9 /* PauseState.cpp */,
+				669A21A71E42581B009D5FC9 /* PauseState.hpp */,
 			);
 			name = "State Management";
 			sourceTree = "<group>";
@@ -226,13 +236,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669A21A81E42581B009D5FC9 /* PauseState.cpp in Sources */,
 				669A216B1E40AF44009D5FC9 /* main.cpp in Sources */,
+				669A21CE1E428035009D5FC9 /* ResourcePath.mm in Sources */,
 				669A21881E40D61B009D5FC9 /* EventManager.cpp in Sources */,
 				669A21821E40C2EB009D5FC9 /* Window.cpp in Sources */,
 				669A219A1E422190009D5FC9 /* IntroState.cpp in Sources */,
-				669A21681E40AF44009D5FC9 /* ResourcePath.mm in Sources */,
 				669A21A21E423EF6009D5FC9 /* MainMenuState.cpp in Sources */,
 				669A21851E40CF29009D5FC9 /* Game.cpp in Sources */,
+				669A21A51E42552E009D5FC9 /* GameState.cpp in Sources */,
 				669A21911E4106D7009D5FC9 /* StateManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

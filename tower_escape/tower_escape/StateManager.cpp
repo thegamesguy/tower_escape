@@ -9,14 +9,16 @@
 #include "StateManager.hpp"
 #include "IntroState.hpp"
 #include "MainMenuState.hpp"
+#include "GameState.hpp"
+#include "PauseState.hpp"
 
 StateManager::StateManager(SharedContext& context) : shared_context_(context)
 {
     // Register states
     RegisterState<IntroState>(StateType::kIntro);
     RegisterState<MainMenuState>(StateType::kMainMenu);
-    
-    //RegisterState<State_Game>(StateType::Game); RegisterState<State_Paused>(StateType::Paused);
+    RegisterState<GameState>(StateType::kGame);
+    RegisterState<PauseState>(StateType::kPaused);
 }
 
 StateManager::~StateManager()
@@ -40,7 +42,7 @@ void StateManager::Draw()
         
         while (itr != states_.begin()) {
             if(itr != states_.end()) {
-                if(itr->second->IsTransparent()){
+                if(!itr->second->IsTransparent()){
                     break;
                 }
             }
@@ -69,7 +71,7 @@ void StateManager::Update(const sf::Time &time)
         
         while (itr != states_.begin()) {
             if(itr != states_.end()) {
-                if(itr->second->IsTranscendent()){
+                if(!itr->second->IsTranscendent()){
                     break;
                 }
             }

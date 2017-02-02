@@ -20,7 +20,7 @@ enum class StateType {
     kGame,
     kPaused,
     kGameOver,
-    kCredits
+    kInfo
 };
 
 

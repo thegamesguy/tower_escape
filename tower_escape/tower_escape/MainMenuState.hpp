@@ -28,6 +28,7 @@ public:
     
     void MenuSelectionUp(EventDetails* event_details);
     void MenuSelectionDown(EventDetails* event_details);
+    void MenuItemSelected(EventDetails* event_details);
     
 private:
     sf::Font font_;
@@ -39,6 +40,7 @@ private:
     sf::RectangleShape rects[3];
     sf::Text labels[3];
 
+    unsigned int selected_menu_index_;
 };
 
 #endif /* MainMenuState_hpp */
